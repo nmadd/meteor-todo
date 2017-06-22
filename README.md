@@ -1,4 +1,4 @@
 # Meteor Todo
-Simple todo list app built using Meteor.
+Simple todo list app built using Meteor and React.
 
-To run: clone, cd into repo, and run `meteor` ([meteor](https://www.meteor.com/) must be installed in order to run the app). 
+To run: clone, cd into repo, and run `meteor` ([meteor](https://www.meteor.com/) must be installed in order to run the app).
