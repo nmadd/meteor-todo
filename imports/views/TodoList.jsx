@@ -3,7 +3,7 @@ import Todos from '../collections/Todos';
 
 const TodoList = ({todos}) => {
   function todoList() {
-    return todos.map((todo, indx) => <li key={indx}>{todo.text}{deleteButton(todo._id)}</li>)
+    return todos.map((todo, indx) => <li key={indx}>{todo.text} by {todo.username}{deleteButton(todo._id)}</li>)
   }
 
   function deleteTodo(todoId) {

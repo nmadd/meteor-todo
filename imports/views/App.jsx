@@ -1,24 +1,24 @@
 import React, {Component} from 'react';
-import { createContainer } from 'meteor/react-meteor-data';
+import {Switch, Route} from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
-import Todos from '../collections/Todos.js';
-import AddTodo from './AddTodo.jsx';
 import TodoList from './TodoList.jsx';
-
+import TodoPage from './TodoPage.jsx';
+import NavBar from './NavBar.jsx';
+import Accounts from './Accounts.jsx';
+import NavBarItems from '../config/navbar-config.js';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <AddTodo />
-        <TodoList todos={this.props.todos}/>
+        <NavBar items={NavBarItems}/>
+        <Switch >
+          <Route path='/login' component={Accounts} />
+          <Route path='/' component={TodoPage} />
+        </Switch>
       </div>
     );
   }
 }
 
-export default createContainer(() => {
-  return {
-    todos: Todos.find().fetch(),
-  };
-}, App);
+export default App;

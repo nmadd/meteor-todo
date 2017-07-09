@@ -14,7 +14,7 @@ class AddTodo extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    Todos.insert({text: this.state.todoInputText});
+    Todos.insert({text: this.state.todoInputText, user_id: Meteor.userId(), username: Meteor.user().username});
   }
 
   handleChange(event) {
